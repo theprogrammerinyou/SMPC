@@ -9,6 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   </head>
   <body class="bg-white dark:bg-gray-900">
     <!-- navbar -->
@@ -48,16 +49,17 @@
           Got a technical issue? Want to give us a manufacturing order? Need
           details about our inspection plan? Let us know.
         </p>
-        <form action="#" class="space-y-8">
+        <form id="mail-form" class="space-y-8">
           <div>
             <label
-              for="email"
+              for="user_email"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >Your email</label
             >
             <input
               type="email"
-              id="email"
+              id="user_email"
+              name="user_email"
               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
               placeholder="name@smpc.com"
               required
@@ -65,15 +67,16 @@
           </div>
           <div>
             <label
-              for="subject"
+              for="user_subject"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >Subject</label
             >
             <input
               type="text"
-              id="subject"
+              id="user_subject"
               class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
               placeholder="Let us know how we can help you"
+              name="user_subject"
               required
             />
           </div>
@@ -86,12 +89,14 @@
             <textarea
               id="message"
               rows="6"
+              name="message"
               class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
               placeholder="Leave a comment..."
             ></textarea>
           </div>
           <button
             type="submit"
+            id="send-message"
             class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-700 sm:w-fit hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Send message
@@ -100,7 +105,6 @@
       </div>
     </section>
 
-    <!-- footer -->
     <!-- footer -->
     <footer class="p-4 bg-white sm:p-6 dark:bg-gray-800">
       <div class="mx-auto max-w-screen-xl">
@@ -219,4 +223,5 @@
       </div>
     </footer>
   </body>
+  <script src="contact-script.js" type="text/javascript"></script>
 </html>
