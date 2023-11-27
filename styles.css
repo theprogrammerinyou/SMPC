@@ -50,3 +50,18 @@ nav ul li a.active {
   padding: 10px 35px;
   border-radius: 20px;
 }
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 7)); }
+}
+
+.slider .slide-track {
+    animation: scroll 40s linear infinite;
+}
+
+.slider .slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
