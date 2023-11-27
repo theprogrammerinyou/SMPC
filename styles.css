@@ -44,3 +44,9 @@
 .carousel:hover .dot, .carousel:hover .control-prev, .carousel:hover .control-next {
     opacity: 1;
 }
+
+nav ul li a.active {
+  background-color: rgba(229, 231, 235, 1); /* Change this to the color you want */
+  padding: 10px 35px;
+  border-radius: 20px;
+}
